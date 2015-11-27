@@ -211,3 +211,32 @@ suresh@suresh-notebook ~ $ history
   211  sudo nano /etc/default/grub
   212  history
 suresh@suresh-notebook ~ $ 
+
+
+/devel/utils/scripts/java.sh
+/devel/utils/scripts/maven.sh
+/devel/utils/scripts/node.sh
+
+
+HISTFILESIZE=10000
+
+init_java(){
+	export JAVA_HOME="/devel/workers/java/java_default"
+	export JDK_HOME=$JAVA_HOME
+	export JRE_HOME=$JAVA_HOME/jre
+	PATH=$PATH:$JAVA_HOME/bin
+}
+init_java;
+
+init_maven(){
+	export MAVEN_HOME="/devel/workers/maven/maven_default"
+	export M2_HOME=$MAVEN_HOME
+	PATH=$PATH:$MAVEN_HOME/bin
+}
+init_maven;
+
+init_node(){
+	export NODE_HOME="/devel/workers/node/node_default"
+	PATH=$PATH:$NODE_HOME/bin
+}
+init_node;
